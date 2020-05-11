@@ -345,7 +345,7 @@ a.article-title:hover,
 @media screen and (max-width: 839px) {
   #logo {
     float: none;
-    margin: 0 auto;
+    margin: 12px auto;
     display: block;
     background-position: center;
   }
