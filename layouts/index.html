@@ -36,10 +36,10 @@
                     {{ end }}
                 </div>
                 <div class="article-entry" itemprop="articleBody">
-                    <p>
+                    
                         {{ if .Params.featuredImage }}<img src="{{.Params.featuredImage}}"><br>{{ end }}
                     {{ .Summary }}
-                    </p>
+                   
                     <p class="article-more-link">
                         <a href="{{ .RelPermalink }}">{{ T "ReadMore" }}</a>
                     </p>
@@ -49,7 +49,7 @@
                 <footer class="article-footer">
                     <ul class="article-tag-list">
                         {{ range .Params.tags }}
-                        <li class="article-tag-list-item">
+                        <li class="article-tag-list-item"> 
                             <a class="article-tag-list-link" href="{{ $Site.BaseURL}}/tags/{{ . | urlize }}">{{ . }}
                             </a>
                         </li>

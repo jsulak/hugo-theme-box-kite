@@ -19,3 +19,6 @@ min_version = 0.20
   name = "Minos"
   homepage = "https://github.com/ppoffice/hexo-theme-minos"
   repo = "https://github.com/ppoffice/hexo-theme-minos"
+
+[params]
+  notoc = true
