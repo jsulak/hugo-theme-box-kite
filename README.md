@@ -1,4 +1,6 @@
-# Minos
+# Box Kite
+
+Forked from the Minos theme, README below.
 
 **_A simple and retro styled theme, concentrated more on your ideas._**
 
