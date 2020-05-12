@@ -61,16 +61,14 @@ th,
 td {
   margin: 0;
   padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: 400;
-  font-style: inherit;
+  line-height: 1.6em;
+}
+
+body {
   font-family: Georgia, Times, serif;
+  font-weight: 400;
   font-size: 19px;
   line-height: 1.6em;
-  vertical-align: baseline;
-}
-body {
   color: rgb(51, 51, 51);
   background: #fff;
   -webkit-font-smoothing: antialiased;
@@ -189,6 +187,7 @@ a.article-title,
 .layout-wrap-inner .category-list a,
 .tag-cloud a {
   color: #111;
+  
   text-decoration: none;
   border-bottom: 1px dotted transparent;
 }
@@ -207,6 +206,9 @@ a.article-title:hover,
 .layout-wrap-inner .category-list a:hover,
 .tag-cloud a:hover {
   border-bottom-color: #000;
+}
+.archive-article-title {
+  font-weight: 400;
 }
 .article-entry a {
   border-bottom: 1px dotted #000;
@@ -460,6 +462,16 @@ a.article-title:hover,
   font-style: normal;
   line-height: 1em;
 }
+.article-title a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px dotted transparent;
+  line-height: 1em;
+}
+.article-title a:hover {
+  border-bottom-color: #000;
+}
+
 .article-entry {
   color: #111;
   padding: 0;
@@ -739,7 +751,7 @@ a.article-title:hover,
 .archive-year-wrap,
 .archive-category-wrap,
 .archive-tag-wrap {
-  font-size: 1.4em;
+  /* font-size: 1.4em; */
   margin-bottom: 1em;
 }
 .archives {
@@ -822,11 +834,11 @@ a.article-title:hover,
 .article-entry pre,
 .article-entry .highlight {
   margin: 0;
-  font-size: 14px;
-  background: #23241f;
+  font-size: 12px;
+  /* background: #23241f; */
   padding: 15px 0;
   overflow: auto;
-  color: #fff;
+  /* color: #fff; */
   line-height: 22.4px;
 }
 .article-entry .highlight .gutter pre,
@@ -838,17 +850,10 @@ a.article-title:hover,
 .article-entry code {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace, '华文中宋';
 }
-.article-entry code {
-  background: #f2f2f2;
-  padding: 0 0.3em;
-}
-.article-entry pre {
-  padding: 20px;
-}
 .article-entry pre code {
-  background: none;
+  /* background: none; */
   text-shadow: none;
-  padding: 0;
+  padding: 1em;
 }
 .article-entry pre .highlight {
   padding: 0;
