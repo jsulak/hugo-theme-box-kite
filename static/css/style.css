@@ -467,13 +467,13 @@ a.article-title:hover,
   font-size: 1.8em;
   font-weight: bold;
   font-style: normal;
-  line-height: 1em;
+  line-height: 1.2em;
 }
 .article-title a {
   text-decoration: none;
   color: inherit;
   border-bottom: 1px dotted transparent;
-  line-height: 1em;
+  line-height: 1.2em;
 }
 .article-title a:hover {
   border-bottom-color: #000;
