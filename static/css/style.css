@@ -511,6 +511,12 @@ a.article-title:hover,
   margin-top: 1.4em;
   margin-bottom: 1.4em;
 }
+
+.article-entry li {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 .article-entry img,
 .article-entry video {
   max-width: 100%;
