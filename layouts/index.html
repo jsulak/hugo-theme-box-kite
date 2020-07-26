@@ -36,15 +36,8 @@
                     {{ end }}
                 </div>
                 <div class="article-entry" itemprop="articleBody">
-                    
                         {{ if .Params.featuredImage }}<img src="{{.Params.featuredImage}}"><br>{{ end }}
-                    {{ .Summary }}
-                   
-                    {{ if .Truncated }}
-                    <p class="article-more-link">
-                        <a href="{{ .RelPermalink }}">{{ T "ReadMore" }}</a>
-                    </p>
-                    {{ end }}
+                        {{ .Content }}
                 </div>
 
                 {{ if .Params.tags }}
