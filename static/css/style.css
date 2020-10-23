@@ -550,7 +550,6 @@ a.article-title:hover,
 .article-entry blockquote {
   margin: 1.4em 20px;
   position: relative;
-  font-style: italic;
 }
 
 .article-entry blockquote:before {
