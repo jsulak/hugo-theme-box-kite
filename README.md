@@ -1,147 +1,58 @@
 # Box Kite
 
-Forked from the Minos theme, README below.
-
-**_A simple and retro styled theme, concentrated more on your ideas._**
-
-Minos is a Hugo theme ported from Hexo theme [Minos](https://github.com/ppoffice/hexo-theme-minos). Requires Hugo v0.59+.
-
-## Screenshots
-
-![Home](https://cdn.rawgit.com/carsonip/hugo-theme-minos/cb2cdd88/images/screenshot.png)
-![Article](https://cdn.rawgit.com/carsonip/hugo-theme-minos/cb2cdd88/images/article.png)
-![Tag](https://cdn.rawgit.com/carsonip/hugo-theme-minos/cb2cdd88/images/tag.png)
-
-## Features
-
-* Everything in the original Mino theme, except
-    * Gallery (fancybox)
-    * Duoshuo comment
-    * Search box
-    * Hierarchical categories (since this isn't supported in Hugo)
-* Smart table of contents (will highlight and expand current section in TOC)
-* Disqus
-* Google Analytics
-* [KaTeX](https://github.com/Khan/KaTeX)
-* Syntax highlighting using [highlight.js](https://github.com/isagalaev/highlight.js)
+A minimal blog theme derived from the Hugo Minos theme. Requires Hugo 0.166.0 or later; tested with 0.166.0.
 
 ## Installation
 
-To install Minos as your theme, first clone this repository in the `themes/` directory:
-
-```
-$ cd themes/
-$ git clone --depth 1 https://github.com/carsonip/hugo-theme-minos
+```sh
+git submodule add https://github.com/jsulak/hugo-theme-box-kite.git themes/box-kite
 ```
 
-Second, specify `hugo-theme-minos` as your default theme in the config.toml file. Just add the line
+Configure your site:
 
+```toml
+theme = "box-kite"
+locale = "en-US"
+
+[params]
+  author = "Your name"
+  customCSS = ["css/custom.css"]
+
+[pagination]
+  pagerSize = 10
+
+[markup.highlight]
+  style = "tomorrow-night"
 ```
-theme = "hugo-theme-minos"
-```
+
+Code highlighting uses Hugo's built-in renderer. Add a language identifier to fenced code blocks to enable highlighting. No browser-side highlighting library is loaded.
 
 ## Options
 
-### Pagination
-```
-paginate = 10
-```
+Set `params.noPostNavigation = true` to hide the next/previous post links.
 
-### Smart TOC
-```
-[params]
-    smartToc = true
+Optional Disqus comments use the current Hugo services configuration:
+
+```toml
+[services.disqus]
+  shortname = "your-shortname"
 ```
 
-### Post Navigation
-```
-[params]
-    noPostNavigation = true
-```
+Post front matter supports:
 
-This option disables links to next and previous post at the bottom of posts.
+- `featuredImage`: image URL displayed on the homepage.
+- `hidden: true`: exclude the page from the homepage listing.
+- `omitDate: true`: hide the date on the individual page.
+- `nocomment: true`: disable Disqus on the individual page.
 
-### Disqus
-```
-disqusShortname = "xxxxxx"
-```
+## Upgrading from the legacy theme
 
-### Google Analytics
-```
-googleAnalytics = "UA-123-45"
-```
+Author information now comes from `params.author`. Disqus uses `services.disqus.shortname`. Post navigation uses Hugo's current `Next` and `Prev` methods.
 
-### KaTeX
-```
-[params]
-    katex = true
-```
+The legacy Universal Analytics, Smart TOC/jQuery, KaTeX, and Highlight.js integrations have been removed. The `googleAnalytics`, `smartToc`, and `katex` options are no longer supported by this theme. Use Hugo's built-in highlighting configuration as shown above.
 
-This option enables the KaTeX auto-render extension. To render block math, use `$$ ... $$`. For inline math, use `\\( ... \\)`. For more details, please refer to https://github.com/KaTeX/KaTeX/blob/v0.7.1/contrib/auto-render/auto-render.js#L73 .
+## Credits and license
 
-### Custom CSS
-```
-[params]
-    customCss = ["css/foo.css"]
-```
+Maintained by James Sulak. Based on [Carson Ip's Hugo Minos port](https://github.com/carsonip/hugo-theme-minos) of [PPOffice's Hexo Minos theme](https://github.com/ppoffice/hexo-theme-minos).
 
-### Others
-
-For other configuration variables, visit [Hugo documentation](https://gohugo.io/overview/configuration/#configuration-variables).
-
-## Post Params
-
-### Featured Image displayed in index.html
-```
-+++
-featuredImage = "img/foobar.jpg"
-+++
-```
-
-### Hide the post from index.html
-This can be used when creating an "About me"-page.
-```
-+++
-hidden = true
-+++
-```
-
-### Enable KaTeX for this post
-Enable KaTeX for a specific post without enabling the global switch.
-```
-+++
-katex = true
-+++
-```
-
-### Suppress date in an article
-Hide the date from an article, e.g. because it's just an index:
-```
-+++
-omitDate = true
-+++
-```
-
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-
-## Original Author
-
-PPOffice
-
-* https://github.com/ppoffice
-
-## Ported by
-
-Carson Ip
-
-* https://github.com/carsonip
-
-## License
-
-Licensed under the MIT License. See the [LICENSE](https://github.com/carsonip/hugo-theme-minos/blob/master/LICENSE.md) file for more details.
+Licensed under the MIT License; see [LICENSE.md](LICENSE.md).

@@ -7,8 +7,8 @@ licenselink = "https://github.com/jsulak/hugo-theme-box-kite/blob/master/LICENSE
 description = "A simple and retro styled theme ported from Hexo"
 homepage = "https://github.com/jsulak/hugo-theme-box-kite"
 tags = ["blog", "minimal"]
-features = ["blog", ""]
-min_version = 0.20
+features = ["blog", "syntax-highlighting"]
+min_version = "0.166.0"
 
 [author]
   name = "James Sulak"
